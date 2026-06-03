@@ -2,6 +2,9 @@ import streamlit as st
 import requests
 
 st.title("AI 工程 Demo")
+uploaded_file = st.file_uploader("上传PDF", type = ["pdf"])
+if uploaded_file is not None:
+    st.write(f"已上传: {uploaded_file.name}")
 
 question = st.text_input("输入问题")
 
